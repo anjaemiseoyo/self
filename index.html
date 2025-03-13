@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6분 동안 스크롤되는 웹</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .scroll-container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+        }
+        .scroll-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            animation: scrollAnimation 240s linear infinite;
+        }
+        .scroll-content img, .scroll-content video {
+            width: 20vw;  /* 이미지 & 비디오 크기 */
+            height: auto;
+            display: block;
+            margin: 0px 0;
+        }
+
+        @keyframes scrollAnimation {
+            from { transform: translateY(0); }
+            to { transform: translateY(-500%); } /* 절반만 이동 후 이어서 반복 */
+        }
+    </style>
+</head>
+<body>
+    <div class="scroll-container">
+        <div class="scroll-content">
+            <img src="slim1.jpg" alt="이미지 1">
+            <img src="slim2.jpg" alt="이미지 2">
+            <img src="slim3.jpg" alt="이미지 3">
+            <img src="slim4.jpg" alt="이미지 4">
+            <video src="video.mp4" autoplay muted loop playsinline></video>
+            <video src="video.mp4" autoplay muted loop playsinline></video>
+            <video src="video.mp4" autoplay muted loop playsinline></video>
+            <img src="slim.jpg" alt="이미지 6">
+            
+            <!-- 복제된 콘텐츠 추가 -->
+            <img src="slim1.jpg" alt="이미지 1">
+            <img src="slim2.jpg" alt="이미지 2">
+            <img src="slim3.jpg" alt="이미지 3">
+            <img src="slim4.jpg" alt="이미지 4">
+            <video src="video.mp4" autoplay muted loop playsinline></video>
+            <img src="slim.jpg" alt="이미지 6">
+
+            <img src="slim1.jpg" alt="이미지 1">
+            <img src="slim2.jpg" alt="이미지 2">
+            <img src="slim3.jpg" alt="이미지 3">
+            <img src="slim4.jpg" alt="이미지 4">
+            <video src="video.mp4" autoplay muted loop playsinline></video>
+            <img src="slim.jpg" alt="이미지 6">
+
+            <img src="slim1.jpg" alt="이미지 1">
+            <img src="slim2.jpg" alt="이미지 2">
+            <img src="slim3.jpg" alt="이미지 3">
+            <img src="slim4.jpg" alt="이미지 4">
+            <video src="video.mp4" autoplay muted loop playsinline></video>
+            <img src="slim.jpg" alt="이미지 6">
+        </div>
+    </div>
+</body>
+</html>
